@@ -16,8 +16,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-#test subreddit for inital bot
-subreddit = reddit.subreddit('pythonforengineers')
+#checking the climbing subreddit's 10 hottest posts
+subreddit = reddit.subreddit('climbing')
 for submission in subreddit.hot(limit=10):
     if submission.id not in posts_replied_to:
         #search titles regardless of case
